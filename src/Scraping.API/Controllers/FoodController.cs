@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Scraping.Application.DTOs;
+using Scraping.Application.Interfaces;
 using Scraping.Domain.Entities;
 using Scraping.Domain.Interfaces;
 
@@ -25,14 +27,21 @@ public class FoodController : ControllerBase
         return Ok(scrapedFoodItems);
     }
     [HttpGet("search")]
-    public async Task<IEnumerable<FoodItem>> GetByName(string name)
+    public async Task<IEnumerable<FoodItemDto?>> GetByName(string name)
     {
         return await _foodService.GetByNameAsync(name);
     }
+   
 
     [HttpGet]
-    public async Task<IEnumerable<FoodItem>> GetAll()
+    public async Task<IEnumerable<FoodItemDto?>> GetAll()
     {
         return await _foodService.GetAllAsync();
     }
+   [HttpGet("code")]
+    public async Task<FoodItemDto?> GetByCode(string code)
+    {
+        return await _foodService.GetByCodeAsync(code);
+    }
+   
 }

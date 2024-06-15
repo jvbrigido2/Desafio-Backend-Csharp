@@ -29,12 +29,38 @@ namespace Scraping.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
+                    b.Property<string>("DataType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("FoodItemCode")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("MaximumValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MinimumValue")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NumberOfDataUsed")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("References")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StandardDeviation")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Unit")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("ValuePer100g")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 

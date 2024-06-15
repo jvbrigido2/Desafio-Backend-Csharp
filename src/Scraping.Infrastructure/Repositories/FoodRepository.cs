@@ -24,6 +24,12 @@ public class FoodRepository : IFoodRepository
         return await _context.FoodItems.Include(f => f.Components).ToListAsync();
     }
 
+    public async Task<FoodItem?> GetByCodeAsync(string code)
+    {
+        return await _context.FoodItems.Include(f => f.Components)
+                                        .FirstOrDefaultAsync(f => f.Code == code);
+    }
+
     public async Task<IEnumerable<FoodItem>> GetByNameAsync(string name)
     {
         return await _context.FoodItems

@@ -13,11 +13,6 @@ namespace Scraping.Infrastructure.Services
         {
             var web = new HtmlWeb();
             var htmlDoc = await web.LoadFromWebAsync(_url);
-
-            
-            var htmlContent = htmlDoc.DocumentNode.OuterHtml;
-            File.WriteAllText("loaded_page.html", htmlContent);
-
            
             var nodes = htmlDoc.DocumentNode.SelectNodes("//table[contains(@class, 'table') and contains(@class, 'table-striped')]/tbody/tr");
 
@@ -79,7 +74,15 @@ namespace Scraping.Infrastructure.Services
                     {
                         var component = new Component
                         {
-                            Name = HtmlEntity.DeEntitize(columns[0].InnerText.Trim())
+                            Name = columns[0].InnerText.Trim(),
+                            Unit = columns[1].InnerText.Trim(),
+                            ValuePer100g = double.TryParse(columns[2].InnerText.Trim(), out var valuePer100g) ? valuePer100g : 0,
+                            StandardDeviation = columns[3].InnerText.Trim(),
+                            MinimumValue = columns[4].InnerText.Trim(),
+                            MaximumValue = columns[5].InnerText.Trim(),
+                            NumberOfDataUsed = columns[6].InnerText.Trim(),
+                            References = columns[7].InnerText.Trim(),
+                            DataType = columns[8].InnerText.Trim()
                         };
 
                         components.Add(component);

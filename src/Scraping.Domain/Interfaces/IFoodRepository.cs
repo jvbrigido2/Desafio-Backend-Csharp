@@ -5,6 +5,7 @@ public interface IFoodRepository
 {
     Task<IEnumerable<FoodItem>> GetAllAsync();
     Task<IEnumerable<FoodItem>> GetByNameAsync(string name);
+    Task<FoodItem?> GetByCodeAsync(string code);
 
     Task AddAsync(FoodItem foodItem);
 }

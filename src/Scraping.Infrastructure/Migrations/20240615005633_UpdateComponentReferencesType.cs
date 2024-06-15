@@ -4,7 +4,7 @@
 
 namespace Scraping.Infrastructure.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class UpdateComponentReferencesType : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -30,6 +30,14 @@ namespace Scraping.Infrastructure.Migrations
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Unit = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ValuePer100g = table.Column<double>(type: "float", nullable: false),
+                    StandardDeviation = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MinimumValue = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MaximumValue = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NumberOfDataUsed = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    References = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DataType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FoodItemCode = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
