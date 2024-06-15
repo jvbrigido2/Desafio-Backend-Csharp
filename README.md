@@ -27,6 +27,14 @@ src/
 |   |-- Services/             # Serviços de scraping
 ```
 
+## Tecnologias Utilizadas
+- .NET Core 6.0: Framework para desenvolvimento da aplicação.
+- Entity Framework Core: ORM para acesso ao banco de dados.
+- AutoMapper: Biblioteca para mapeamento de objetos.
+- Swashbuckle: Biblioteca para geração de documentação Swagger.
+- SQL Server: Banco de dados relacional.
+- HtmlAgilityPack: Biblioteca para WebScraping
+
 ## Instalação
 
 ### Pré-requisitos
@@ -105,12 +113,3 @@ Para obter um alimento pelo código:
 ```sh
 GET /api/food/code
 ```
-
-## Tecnologias Utilizadas
-- .NET Core 6.0: Framework para desenvolvimento da aplicação.
-- Entity Framework Core: ORM para acesso ao banco de dados.
-- AutoMapper: Biblioteca para mapeamento de objetos.
-- Swashbuckle: Biblioteca para geração de documentação Swagger.
-- SQL Server: Banco de dados relacional.
-- HtmlAgilityPack: Biblioteca para WebScraping
-
