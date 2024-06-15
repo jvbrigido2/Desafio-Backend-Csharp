@@ -26,7 +26,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowOrigin",
         builder =>
         {
-            builder.WithOrigins("http://localhost:4200")
+            builder.WithOrigins("https://scraping-front-six.vercel.app", "http://localhost:4200")
                    .AllowAnyMethod()
                    .AllowAnyHeader();
         });
