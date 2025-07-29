@@ -1,0 +1,122 @@
+vercel logs
+
+2025-07-29T18:15:33.399Z [info] Editando atendimentos do paciente 6823ead3bb1806779df4fdd1 com o colaborador Maria José Da Silva
+2025-07-29T18:15:33.399Z [info] Limitado ao período: 2025-07-01 até 2025-08-01
+2025-07-29T18:15:33.400Z [info] [DIAGNÓSTICO DE FUSO] Dados recebidos do frontend: {"nomeCuidador":"Maria José Da Silva","telefoneCuidador":"(67) 8192-8306","valor":106.66}
+2025-07-29T18:15:33.400Z [info] Dados recebidos na API todos: {
+  nomeCuidador: 'Maria José Da Silva',
+  telefoneCuidador: '(67) 8192-8306',
+  valor: 106.66
+}
+2025-07-29T18:15:33.400Z [info] Atualizando o valor para: 106.66
+2025-07-29T18:15:33.402Z [info] ATENÇÃO: Limitando edição ao período da folha: 2025-07-01 até 2025-08-01
+2025-07-29T18:15:33.402Z [info] Filtro aplicado na edição em massa: {
+  "AND": [
+    {
+      "pacienteId": "6823ead3bb1806779df4fdd1"
+    },
+    {
+      "nomeCuidador": "Maria José Da Silva"
+    },
+    {
+      "horarioInicio": {
+        "gte": "2025-07-01T00:00:00.000Z",
+        "lt": "2025-08-01T00:00:00.000Z"
+      }
+    }
+  ]
+}
+2025-07-29T18:15:33.402Z [info] ATENÇÃO: Atualização de VALOR detectada - OBRIGATÓRIO usar processamento individual
+2025-07-29T18:15:33.526Z [info] Encontrados 32 atendimentos para processamento individual
+2025-07-29T18:15:33.526Z [info] Encontrados 32 atendimentos para ajuste de horários
+2025-07-29T18:15:33.526Z [info] Buscando atendimento de referência para detectar padrão diurno/noturno
+2025-07-29T18:15:33.650Z [info] Atendimento referência em UTC: Início=23, Fim=11
+2025-07-29T18:15:33.650Z [info] Detectado padrão de atendimento pelo atendimento de referência: NOTURNO
+2025-07-29T18:15:33.650Z [info] 🚀 [PERFORMANCE] Iniciando edição otimizada de 32 atendimentos
+2025-07-29T18:15:33.650Z [info] 📋 Padrão detectado: DIURNO | Horários: N/A - N/A
+2025-07-29T18:15:33.650Z [info] 📦 Processando 4 chunks de até 10 atendimentos cada
+
+
+2025-07-29T18:16:30.286Z [info] Editando atendimentos do paciente 6823ead3bb1806779df4fdd1 com o colaborador Maria José Da Silva
+2025-07-29T18:16:30.286Z [info] Limitado ao período: 2025-07-01 até 2025-08-01
+2025-07-29T18:16:30.289Z [info] [DIAGNÓSTICO DE FUSO] Dados recebidos do frontend: {"nomeCuidador":"Maria José Da Silva","telefoneCuidador":"(67) 8192-8306","valor":106}
+2025-07-29T18:16:30.298Z [info] Dados recebidos na API todos: {
+  nomeCuidador: 'Maria José Da Silva',
+  telefoneCuidador: '(67) 8192-8306',
+  valor: 106
+}
+2025-07-29T18:16:30.298Z [info] Atualizando o valor para: 106
+2025-07-29T18:16:30.298Z [info] ATENÇÃO: Limitando edição ao período da folha: 2025-07-01 até 2025-08-01
+2025-07-29T18:16:30.298Z [info] Filtro aplicado na edição em massa: {
+  "AND": [
+    {
+      "pacienteId": "6823ead3bb1806779df4fdd1"
+    },
+    {
+      "nomeCuidador": "Maria José Da Silva"
+    },
+    {
+      "horarioInicio": {
+        "gte": "2025-07-01T00:00:00.000Z",
+        "lt": "2025-08-01T00:00:00.000Z"
+      }
+    }
+  ]
+}
+2025-07-29T18:16:30.298Z [info] ATENÇÃO: Atualização de VALOR detectada - OBRIGATÓRIO usar processamento individual
+2025-07-29T18:16:31.578Z [info] Encontrados 32 atendimentos para processamento individual
+2025-07-29T18:16:31.578Z [info] Encontrados 32 atendimentos para ajuste de horários
+2025-07-29T18:16:31.578Z [info] Buscando atendimento de referência para detectar padrão diurno/noturno
+2025-07-29T18:16:31.701Z [info] Atendimento referência em UTC: Início=23, Fim=11
+2025-07-29T18:16:31.701Z [info] Detectado padrão de atendimento pelo atendimento de referência: NOTURNO
+2025-07-29T18:16:31.702Z [info] 🚀 [PERFORMANCE] Iniciando edição otimizada de 32 atendimentos
+2025-07-29T18:16:31.702Z [info] 📋 Padrão detectado: DIURNO | Horários: N/A - N/A
+2025-07-29T18:16:31.702Z [info] 📦 Processando 4 chunks de até 10 atendimentos cada
+2025-07-29T18:16:39.130Z [error] Erro ao atualizar atendimentos do colaborador: [Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.atendimento.update()` invocation:
+
+
+Transaction failed due to a write conflict or a deadlock. Please retry your transaction] {
+  code: 'P2034',
+  clientVersion: '6.4.1',
+  meta: [Object]
+}
+
+
+2025-07-29T18:25:39.881Z [info] Editando atendimentos do paciente 6823ead3bb1806779df4fdd1 com o colaborador Maria José Da Silva
+2025-07-29T18:25:39.881Z [info] Limitado ao período: 2025-07-01 até 2025-08-01
+2025-07-29T18:25:39.881Z [info] [DIAGNÓSTICO DE FUSO] Dados recebidos do frontend: {"nomeCuidador":"Maria José Da Silva","telefoneCuidador":"(67) 8192-8306","valor":106.65}
+2025-07-29T18:25:39.882Z [info] Dados recebidos na API todos: {
+  nomeCuidador: 'Maria José Da Silva',
+  telefoneCuidador: '(67) 8192-8306',
+  valor: 106.65
+}
+2025-07-29T18:25:39.882Z [info] Atualizando o valor para: 106.65
+2025-07-29T18:25:39.882Z [info] ATENÇÃO: Limitando edição ao período da folha: 2025-07-01 até 2025-08-01
+2025-07-29T18:25:39.882Z [info] Filtro aplicado na edição em massa: {
+  "AND": [
+    {
+      "pacienteId": "6823ead3bb1806779df4fdd1"
+    },
+    {
+      "nomeCuidador": "Maria José Da Silva"
+    },
+    {
+      "horarioInicio": {
+        "gte": "2025-07-01T00:00:00.000Z",
+        "lt": "2025-08-01T00:00:00.000Z"
+      }
+    }
+  ]
+}
+2025-07-29T18:25:39.882Z [info] ATENÇÃO: Atualização de VALOR detectada - OBRIGATÓRIO usar processamento individual
+2025-07-29T18:25:40.005Z [info] Encontrados 32 atendimentos para processamento individual
+2025-07-29T18:25:40.005Z [info] Encontrados 32 atendimentos para ajuste de horários
+2025-07-29T18:25:40.005Z [info] Buscando atendimento de referência para detectar padrão diurno/noturno
+2025-07-29T18:25:40.128Z [info] Atendimento referência em UTC: Início=23, Fim=11
+2025-07-29T18:25:40.128Z [info] Detectado padrão de atendimento pelo atendimento de referência: NOTURNO
+2025-07-29T18:25:40.128Z [info] 🚀 [PERFORMANCE] Iniciando edição otimizada de 32 atendimentos
+2025-07-29T18:25:40.128Z [info] 📋 Padrão detectado: DIURNO | Horários: N/A - N/A
+2025-07-29T18:25:40.129Z [info] 📦 Processando 4 chunks de até 10 atendimentos cada
+
+
